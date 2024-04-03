@@ -1,7 +1,10 @@
 package com.example.dagger2dependencyinjection
 
+import javax.inject.Inject
+
 // Constructor Injection
-class UserRegistrationService(private val userRepository :UserRepository, private val emailService : EmailService) {
+class UserRegistrationService @Inject constructor
+    (private val userRepository : UserRepository, private val emailService : EmailService) {
 
     /*  Hard coded
     private val userRepository = UserRepository()
